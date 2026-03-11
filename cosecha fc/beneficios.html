@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.carnet{
+background:linear-gradient(135deg,#111,#000);
+border:2px solid gold;
+border-radius:15px;
+padding:20px;
+text-align:center;
+color:white;
+}
+
+.carnet img{
+border-radius:50%;
+border:3px solid gold;
+margin-top:10px;
+}
+
+.qr{
+margin-top:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>CARNET DIGITAL</h2>
+
+<div class="carnet">
+
+<h3>COSECHA FC</h3>
+
+<p>Socio N° 023</p>
+
+<img src="img/jugador.jpg" width="120">
+
+<h3>Federico Gómez</h3>
+
+<p>Estado: <span class="pagado">SOCIO AL DÍA</span></p>
+
+<div id="qrcode" class="qr"></div>
+
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+
+new QRCode(document.getElementById("qrcode"),{
+text:"SOCIO-023-FEDERICO-GOMEZ",
+width:120,
+height:120
+});
+
+</script>
+
+</body>
+</html>
